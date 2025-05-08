@@ -23,3 +23,11 @@ const books = [
 
 const problem2 = filterByRating(books);
 // console.log(problem2);
+
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  const result = arrays.reduce((prev, curr) => prev.concat(curr));
+  return result;
+}
+const problem3 = concatenateArrays(["a", "b"], ["c"], ["3"], ["asdf"], ["sd"]);
+console.log(problem3);
